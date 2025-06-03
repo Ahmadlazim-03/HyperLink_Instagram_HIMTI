@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "HIMTI UNAIR - Linktree",
+  title: "HIMTI UNAIR",
   description: "Himpunan Mahasiswa Teknik Informatika Universitas Airlangga",
   icons: {
     icon: "/favicon.ico",
