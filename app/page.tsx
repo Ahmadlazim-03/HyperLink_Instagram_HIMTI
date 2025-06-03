@@ -2,8 +2,8 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-// Impor Smartphone sebagai pengganti Telepon, atau jika Anda punya URL logo WhatsApp, kita bisa gunakan Image
-import { Instagram, Youtube, Phone, MessageCircle, ArrowUp, Star, Zap, Music as MusicIconLucide, Smartphone } from "lucide-react"
+// Impor Handshake untuk kartu Partnership
+import { Instagram, Youtube, Phone, MessageCircle, ArrowUp, Star, Zap, Music as MusicIconLucide, Smartphone, Handshake } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 
@@ -63,29 +63,37 @@ export default function HimtiLinktree() {
     },
   ]
 
+  // --- PERUBAHAN DIMULAI DI SINI ---
   const contactLinks = [
     {
-      name: "Media Partner (WhatsApp)", // Nama diubah untuk memperjelas
-      url: "https://wa.me/6281231830086", // Menggunakan link WhatsApp API
-      icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png", // Mengganti Phone dengan Smartphone (atau logo WhatsApp jika ada URL)
-      isCustomImage: true, // Jika menggunakan Smartphone dari lucide, ini false
+      name: "Media Partner",
+      url: "https://wa.me/6281231830086",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png",
+      isCustomImage: true,
       gradient: "from-emerald-500 via-teal-500 to-cyan-500",
       description: "+62 812-3183-0086",
-      subtitle: "Business & Partnerships",
+      subtitle: "Support in Media & Outreach",
+    },
+    {
+      name: "Partnership", // Nama baru
+      url: "https://wa.me/6281927833334", // Link WhatsApp API untuk nomor baru
+      icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png", // Menggunakan ikon Handshake dari lucide-react
+      isCustomImage: true, // Karena kita menggunakan komponen ikon dari lucide
+      gradient: "from-emerald-500 via-teal-500 to-cyan-500", // Gradient baru yang berbeda
+      description: "+62 819-2783-3334",
+      subtitle: "Collaboration & Support",
     },
     {
       name: "LINE Official",
       url: "https://line.me/ti/p/@543rxtej",
-      // --- PERUBAHAN DI SINI ---
-      icon: "https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg", // Menggunakan SVG dari Wikimedia
-      // Jika SVG tidak tampil baik karena styling atau Image component, alternatif PNG berkualitas:
-      // icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/LINE_logo.svg/240px-LINE_logo.svg.png",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg",
       isCustomImage: true,
       gradient: "from-green-500 via-green-600 to-emerald-600",
       description: "@543rxtej",
       subtitle: "Quick Support & Info",
     },
   ]
+  // --- PERUBAHAN SELESAI DI SINI ---
 
   if (!mounted) {
     return null;
@@ -289,12 +297,12 @@ export default function HimtiLinktree() {
                         <div
                           className={`p-3 sm:p-4 rounded-2xl bg-gradient-to-r ${link.gradient} shadow-lg group-hover:scale-110 group-hover:rotate-[-3deg] transition-all duration-500`}
                         >
-                           {link.isCustomImage && typeof IconComponentOrUrl === 'string' ? (
-                             <Image src={IconComponentOrUrl} alt={`${link.name} logo`} width={24} height={24} className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
-                           ) : (
-                             // @ts-ignore 
-                             <IconComponentOrUrl className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
-                           )}
+                          {link.isCustomImage && typeof IconComponentOrUrl === 'string' ? (
+                            <Image src={IconComponentOrUrl} alt={`${link.name} logo`} width={24} height={24} className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
+                          ) : (
+                            // @ts-ignore 
+                            <IconComponentOrUrl className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                          )}
                         </div>
                         <div className="flex-1 min-w-0">
                           <h3 className="font-bold text-slate-800 text-base sm:text-lg truncate mb-1">{link.name}</h3>
