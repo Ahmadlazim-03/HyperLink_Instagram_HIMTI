@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 // Impor Handshake untuk kartu Partnership
-import { Instagram, Youtube, Phone, MessageCircle, ArrowUp, Star, Zap, Music as MusicIconLucide, Smartphone, Handshake } from "lucide-react"
+import { Instagram, Youtube, Phone, MessageCircle, ArrowUp, Star, Zap, Music as MusicIconLucide, Smartphone, Handshake, Globe } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 
@@ -94,6 +94,19 @@ export default function HimtiLinktree() {
     },
   ]
   // --- PERUBAHAN SELESAI DI SINI ---
+
+  // Section Company Profile HIMTI
+  const companyProfile = {
+    name: "Company Profile HIMTI",
+    url: "https://himtiunair.com",
+    icon: Globe,
+    isCustomImage: false,
+    gradient: "from-blue-500 via-cyan-500 to-teal-500",
+    description: "Website resmi HIMTI UNAIR",
+    subtitle: "himtiunair.com",
+  }
+
+  const CompanyIcon = companyProfile.icon
 
   if (!mounted) {
     return null;
@@ -266,6 +279,50 @@ export default function HimtiLinktree() {
               </Card>
             )
           })}
+        </div>
+
+        {/* Company Profile Section */}
+        <div className="space-y-4 mb-10">
+          <div className="text-center mb-8">
+            <h2 className="text-xl font-bold text-white mb-2">Company Profile</h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full mx-auto"></div>
+          </div>
+
+          <Card
+            className="group hover:scale-[1.02] transition-all duration-500 border-0 overflow-hidden bg-white/80 backdrop-blur-xl shadow-xl hover:shadow-2xl"
+          >
+            <CardContent className="p-0 relative">
+              <div className="absolute inset-0 opacity-5">
+                <div className={`w-full h-full bg-gradient-to-r ${companyProfile.gradient}`}></div>
+              </div>
+              <div className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${companyProfile.gradient}`}></div>
+              <Button
+                asChild
+                className="w-full h-auto p-5 sm:p-6 bg-transparent hover:bg-white/50 text-left justify-start border-0 rounded-lg transition-all duration-300"
+                variant="ghost"
+              >
+                <a href={companyProfile.url} target="_blank" rel="noopener noreferrer" className="flex items-center w-full">
+                  <div className="flex items-center space-x-4 w-full">
+                    <div
+                      className={`p-3 sm:p-4 rounded-2xl bg-gradient-to-r ${companyProfile.gradient} shadow-lg group-hover:scale-110 group-hover:rotate-[-3deg] transition-all duration-500`}
+                    >
+                      <CompanyIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-slate-800 text-base sm:text-lg truncate mb-1">{companyProfile.name}</h3>
+                      <p className="text-xs sm:text-sm text-slate-600 mb-1 line-clamp-1">{companyProfile.description}</p>
+                      <p className="text-xs text-slate-500 font-medium">{companyProfile.subtitle}</p>
+                    </div>
+                    <div className="text-slate-400 group-hover:text-slate-600 group-hover:translate-x-1 transition-all duration-300">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Contact Section */}
