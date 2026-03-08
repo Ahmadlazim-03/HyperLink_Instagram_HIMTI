@@ -67,7 +67,7 @@ export default function HimtiLinktree() {
   const contactLinks = [
     {
       name: "Media Partner",
-      url: "https://wa.me/62818-0254-6229",
+      url: "https://wa.me/6281802546229",
       icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png",
       isCustomImage: true,
       gradient: "from-emerald-500 via-teal-500 to-cyan-500",
@@ -76,7 +76,7 @@ export default function HimtiLinktree() {
     },
     {
       name: "Partnership", // Nama baru
-      url: "https://wa.me/62814-5918-9743", // Link WhatsApp API untuk nomor baru
+      url: "https://wa.me/6281459189743", // Link WhatsApp API untuk nomor baru
       icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png", // Menggunakan ikon Handshake dari lucide-react
       isCustomImage: true, // Karena kita menggunakan komponen ikon dari lucide
       gradient: "from-emerald-500 via-teal-500 to-cyan-500", // Gradient baru yang berbeda
