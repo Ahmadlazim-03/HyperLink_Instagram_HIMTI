@@ -71,7 +71,7 @@ export default function HimtiLinktree() {
       icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png",
       isCustomImage: true,
       gradient: "from-emerald-500 via-teal-500 to-cyan-500",
-      description: "+62 812-3183-0086",
+      description: "+62 818-0254-6229",
       subtitle: "Support in Media & Outreach",
     },
     {
@@ -80,7 +80,7 @@ export default function HimtiLinktree() {
       icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png", // Menggunakan ikon Handshake dari lucide-react
       isCustomImage: true, // Karena kita menggunakan komponen ikon dari lucide
       gradient: "from-emerald-500 via-teal-500 to-cyan-500", // Gradient baru yang berbeda
-      description: "+62 819-2783-3334",
+      description: "+62 814-5918-9743",
       subtitle: "Collaboration & Support",
     },
     {
